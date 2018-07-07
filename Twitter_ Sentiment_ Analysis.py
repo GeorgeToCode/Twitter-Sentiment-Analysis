@@ -25,7 +25,7 @@ tweets =  tweepy.Cursor(api.search, q=searchterm).items(no_of_tweets)
 positive,negative,neutral,polarity=0,0,0,0
 
 for tweet in tweets:
-    #print(tweet.text)
+    print(tweet.text)
     analysis = TextBlob(tweet.text)
     polarity+=analysis.sentiment.polarity
 
